@@ -5,6 +5,10 @@ inputs:
   character:
     description: "Futurama character"
     default: "Robot-Mob"
+
+outputs:
+  quote:
+    descrition: "The resulting futurama quote"
 runs:
   using: "node12"
   main: "dist/index.js"
