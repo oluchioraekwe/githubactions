@@ -1,9 +1,13 @@
 const axios = require("axios");
+const core = require("@actions/core");
 
-async function run(name) {
+const DEFAULT_CHARACTER = "Robot-Mob";
+
+async function run() {
+  const character = core.getInput("character") || DEFAULT_CHARACTER;
   try {
     const response = await axios(
-      ` https://futuramaapi.herokuapp.com/api/characters/${name}/1`
+      ` https://futuramaapi.herokuapp.com/api/characters/${character}/1`
     );
     const { data } = response;
     const firstEntry = data[0];
@@ -12,4 +16,4 @@ async function run(name) {
     console.log(error);
   }
 }
-run("Robot-Mob");
+run();

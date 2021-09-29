@@ -1,11 +1,9 @@
 name: Hello World
 
-
 on: [push, pull_request]
 
 jobs:
   hello-world:
-
     runs-on: ubuntu-latest
 
     # Steps represent a sequence of tasks that will be executed as part of the job
@@ -13,5 +11,5 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
       - uses: ./
-
- 
+        with:
+          character: bender
