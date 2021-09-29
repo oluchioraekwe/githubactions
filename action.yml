@@ -4,4 +4,4 @@ author: "Oluchi Oraekwe <chukwukeluoo@gmail.com>"
 
 runs:
   using: "node14"
-  main: "src/index.ts"
+  main: "dist/index.js"
