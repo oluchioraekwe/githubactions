@@ -3883,10 +3883,10 @@ module.exports = function combineURLs(baseURL, relativeURL) {
 
 const axios = __webpack_require__(53);
 
-async function run() {
+async function run(name) {
   try {
     const response = await axios(
-      " https://futuramaapi.herokuapp.com/api/characters/Dr-Zoidberg/1"
+      ` https://futuramaapi.herokuapp.com/api/characters/${name}/1`
     );
     const { data } = response;
     const firstEntry = data[0];
@@ -3895,7 +3895,7 @@ async function run() {
     console.log(error);
   }
 }
-run();
+run("Robot-Mob");
 
 
 /***/ }),
