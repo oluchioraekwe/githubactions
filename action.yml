@@ -3,5 +3,5 @@ description: "Saying hello to the world"
 author: "Oluchi Oraekwe <chukwukeluoo@gmail.com>"
 
 runs:
-  using: "node14"
+  using: "node12"
   main: "dist/index.js"
