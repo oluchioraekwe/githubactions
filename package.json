@@ -1,6 +1,14 @@
 {
   "name": "githubactions",
   "version": "1.0.0",
-  "main": "index.js",
-  "license": "MIT"
+  "main": "dist/index.js",
+  "license": "MIT",
+  "scripts": {
+    "build": "ncc build src/action.js -o dist",
+    "bump": "npm version"
+  },
+  "devDependencies": {
+    "@zeit/ncc": "^0.22.3",
+    "axios": "^0.21.4"
+  }
 }
